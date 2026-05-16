@@ -15,7 +15,7 @@ In addition to weather visualization, the project focuses on modern UI/UX design
 * 🌍 Search weather forecasts by city name
 * 📍 Get current weather using Geolocation API
 * ⏱️ Real-time weather data retrieval
-* 📅 5-day weather forecast
+* 📅 3-day weather forecast
 * 🌡️ Display temperature, humidity, and weather conditions
 * 🧊 Modern Glassmorphism UI design
 * 📱 Fully responsive interface for desktop and mobile devices
@@ -65,7 +65,11 @@ The application follows a client-server architecture:
   * X-Content-Type-Options
   * X-Frame-Options
   * Referrer-Policy
+  * Content-Security-Policy
+  * Access-Control-Allow-Origin
+  * Access-Control-Allow-Methods
 * Controlled API communication between frontend and backend
+* Path traversal prevention
 
 ---
 
