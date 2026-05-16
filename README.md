@@ -18,6 +18,7 @@ In addition to weather visualization, the project focuses on modern UI/UX design
 * 📅 3-day weather forecast
 * 🌡️ Display temperature, humidity, and weather conditions
 * 🧊 Modern Glassmorphism UI design
+* 🍞 Toast notifications 
 * 📱 Fully responsive interface for desktop and mobile devices
 * 🔒 HTTPS support for encrypted communication
 * 🛡️ Backend security controls and HTTP security headers
@@ -171,7 +172,6 @@ node api.js
 ## 📌 Future Improvements
 
 * 📈 Weather charts and data visualization
-* 🔔 Weather alerts and notifications
 * 🗄️ User accounts and saved cities
 
 ---
