@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="icon" href="./images/partly-cloudy-day.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <button id="Location_button">
+        <div class="svg"><svg width="64px" height="64px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#e0e0e0" stroke-width="0.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z" stroke="#e0e0e0" stroke-width="0.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></div>
+        <div class="text">My Location's Weather</div> 
+    </button>
+        <div class="container">
+            <div class="welcome">
+                <p id="day_period">GOOD</p>
+                <div class="time">
+                    <svg width="64px" height="64px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#b1afaf"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 7V12L14.5 10.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#d6d6d6" stroke-width="0.984" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    <p id="show_time">7:45 PM . May 25, 2024</p>
+                </div>
+            </div>  
+            <div class="search">
+                <div class="mobile_search"><div class="search_icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+                </div>
+                <input type="text" id="search_input" placeholder="Enter city"></div>
+                <button id="search_button">Search</button>
+                
+            </div>
+            
+            <div class="weather_icon"><img src="images/partly-cloudy-day.png" id="icon_weather"></div>
+            <div class="temperature">
+                <p class="value">25</p>
+                <p class="unit">°C</p>
+            </div>
+            <div class="description">Partly Cloudy</div>
+            <div id="city">
+                <div class="svg"><svg width="64px" height="64px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#e0e0e0" stroke-width="0.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z" stroke="#e0e0e0" stroke-width="0.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></div>
+                <div class="text">New York, USA</div>
+                
+            </div>
+
+            <div class="forcast">
+                <p id="title">3-DAY FORCAST</p>
+                <div class="cards">
+                <div>
+                    <p id="day">Today</p>
+                    <img src="images/partly-cloudy-day.png">
+                    <p id="max_temp">22°</p>
+                    <p id="min_temp">17°</p>
+                </div>
+
+                <div >
+                    <p id="day">Tue</p>
+                    <img src="images/partly-cloudy-day.png">
+                    <p id="max_temp">22°</p>
+                    <p id="min_temp">17°</p>
+                </div>
+                
+                <div >
+                    <p id="day">Today</p>
+                    <img src="images/partly-cloudy-day.png">
+                    <p id="max_temp">22°</p>
+                    <p id="min_temp">17°</p>
+                </div>
+
+            
+
+                </div>
+            </div>
+            
+
+            <div class="footer">
+                <div class="humidity">
+                    <div class="symbol">
+                    <svg width="64px" height="64px" viewBox="-3.84 -3.84 71.68 71.68" xmlns="http://www.w3.org/2000/svg" fill="" transform="matrix(1, 0, 0, 1, 0, 0)" stroke=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="none" fill-rule="evenodd"> <path fill="#f5f5f5" d="M26.6995662,63 C36.4747667,63 44.3991324,55.0756343 44.3991324,45.3004338 C44.3991324,35.5252333 26.6995662,9 26.6995662,9 C26.6995662,9 9,35.5252333 9,45.3004338 C9,55.0756343 16.9243657,63 26.6995662,63 Z"></path> <path fill="#e6edf4" d="M41.1107898,41 C48.351679,41 54.2215796,35.1300995 54.2215796,27.8892102 C54.2215796,20.648321 41.1107898,1 41.1107898,1 C41.1107898,1 28,20.648321 28,27.8892102 C28,35.1300995 33.8699005,41 41.1107898,41 Z"></path> <path stroke="#f5f5f5" stroke-linecap="round" stroke-width="1.6" d="M32,28 C32,32.9705627 36.0294373,37 41,37 L41,37"></path> <path stroke="#FFF" stroke-linecap="round" stroke-width="1.6" d="M13,46 C13,52.627417 18.372583,58 25,58 L25,58"></path> </g> </g></svg>
+                    </div>
+                    <div class="humidity_components">
+                        <p>Humidity</p>    
+                        <p id="humidity_value">50%</p>
+                    </div>
+                </div>
+
+                <div class="wind">
+                    <div class="symbol">
+                    <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 8H5M7 5.85714V5.5C7 4.11929 8.11929 3 9.5 3C10.8807 3 12 4.11929 12 5.5C12 6.88071 10.8807 8 9.5 8H8" stroke="#efeff0" stroke-width="1.5" stroke-linecap="round"></path> <path d="M4 14H5M15 17V17.5C15 19.433 16.567 21 18.5 21C20.433 21 22 19.433 22 17.5C22 15.567 20.433 14 18.5 14H9" stroke="#efeff0" stroke-width="1.5" stroke-linecap="round"></path> <path d="M2 11H8M15 8V7.5C15 5.567 16.567 4 18.5 4C20.433 4 22 5.567 22 7.5C22 9.433 20.433 11 18.5 11H12.25" stroke="#efeff0" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                    </div>
+                    <div class="wind_components">
+                        <p>Wind</p>
+                        <p id="wind_value">10Km/h</p>
+                    </div>    
+                </div>
+
+            </div>
+        </div>
+
+        <div class="notifications"></div>
+
+    <script src="weather.js"></script>    
+</body>
+</html>
+

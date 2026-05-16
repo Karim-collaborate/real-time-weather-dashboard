@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+body {
+    padding : 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 100vh;
+    color: white;
+}
+
+/* blur effect on background */
+body::before {
+  content: "";
+  position: fixed; /* Keeps the background fixed while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/background.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px); 
+  z-index: -1;
+  transform: scale(1.1); /*Eliminates sharp edges du to blur */
+}
+
+
+#Location_button {
+    display: flex;
+    align-items: center;
+
+    padding: 3px 30px;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(20deg, rgba(143, 143, 143, 0.662), 10%, rgba(255,255,255,0.2)) ;
+    backdrop-filter: blur(10px);               /* Blurs what is behind this div */
+    -webkit-backdrop-filter: blur(10px);        /* Safari support */
+    border : 1px solid white;
+    position: relative;
+}
+
+#Location_button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(135deg,#FF8FCF, #5F9CFF, #B16CEA);
+    border-radius: inherit;
+    width: 0;
+    transition: 150ms ease-in-out;
+}
+
+#Location_button:hover::after {
+    width: 100%;
+}
+
+#Location_button:hover {
+    cursor: pointer;
+}
+
+.svg svg{
+    padding: 0;
+    width: 50px;
+    height: auto;
+    display: inline;
+}
+
+.text {
+    display: inline;
+    font-size: 1.2rem;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background:  rgba(183, 183, 183, 0.03);
+    backdrop-filter: blur(8px);               /* Blurs what is behind this div */
+    -webkit-backdrop-filter: blur(5px);        /* Safari support */
+    border-radius: 20px;
+    padding: 30px 20px;
+    position: relative;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+}
+
+.welcome #day_period {
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.time svg, #show_time {
+    display: inline;
+    color: white
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    gap: 3px
+}
+
+.time svg {
+    width: 30px
+}
+
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);               /* Blurs what is behind this div */
+    -webkit-backdrop-filter: blur(10px);        /* Safari support */
+    padding: 10px 8px;
+    border-radius: 30px;
+}
+
+.search input {
+    outline: none;
+    border: none;
+    background: none;
+    flex-grow: 1;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.search_icon svg {
+    width: 30px;
+    color: white;
+}
+
+
+#search_button {
+    justify-self: flex-end;
+    padding: 10px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background: linear-gradient(135deg, #5F9CFF, #B16CEA, #FF8FCF);
+    position: relative;
+    z-index: 0;
+}
+
+#search_button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(135deg,#FF8FCF, #5F9CFF, #B16CEA);
+    border-radius: inherit;
+    width: 0;
+    transition: 150ms ease-in-out;
+}
+
+#search_button:hover::after {
+    width: 100%;
+}
+
+#search_button:hover {
+    cursor: pointer;
+}
+
+
+
+.weather_icon {
+    width: 100%;
+}
+
+.weather_icon img {
+    width: 150px;
+    margin: auto;
+    display: block;
+}
+
+
+
+.temperature {
+    display: flex;
+    align-items: baseline;    
+    justify-content: center;
+    color: white;
+}
+
+.temperature .value {
+    font-size: 5rem;
+    font-weight: bolder;
+    
+}
+
+.temperature .unit {
+    margin-top: auto;
+    font-size: 3rem;
+}
+
+
+.description {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+
+#city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.forcast {
+    padding: 20px;
+    margin: 10px 0;
+    background:  rgba(183, 183, 183, 0.03);
+    backdrop-filter: blur(5px);               /* Blurs what is behind this div */
+    -webkit-backdrop-filter: blur(5px);        /* Safari support */
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.forcast #title {
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    overflow: auto;
+
+}
+
+.cards div {
+    background:  rgba(183, 183, 183, 0.03);
+    backdrop-filter: blur(10px);               /* Blurs what is behind this div */
+    -webkit-backdrop-filter: blur(8px);        /* Safari support */
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid white;
+
+}
+
+.cards div img {
+    width: 50px;
+}
+
+.cards div #max_temp {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cards div #min_temp {
+    font-size: 12px;
+}
+
+/*footer*/
+.footer {
+    display: flex;
+    gap: 10px;
+}
+
+.wind , .humidity {
+    background: linear-gradient(to bottom right, rgba(60, 60, 60, 0.374), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);               /* Blurs what is behind this div */
+    -webkit-backdrop-filter: blur(10px);        /* Safari support */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+    flex-grow: 1;
+}
+
+.wind .symbol svg, .humidity .symbol svg {
+    width: 40px;
+}
+
+.humidity_components, .wind_components {
+    text-align: center;
+}
+
+.mobile_search {
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
+
+
+
+@keyframes cooldown {
+    to {
+        width: 0;
+    }
+}
+
+.notifications {
+    position: fixed;
+    width: 25%;
+    bottom : 0;
+    right: 0;
+    z-index: 1;
+}
+
+.toast {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+    background: linear-gradient(20deg, rgba(143, 143, 143, 0.662), 10%, rgba(255,255,255,0.2)) ;
+    backdrop-filter: blur(10px);               /* Blurs what is behind this div */
+    -webkit-backdrop-filter: blur(10px);        /* Safari support */
+    border : 1px solid white;
+    gap: 16px;
+    margin: 10px 0;
+    animation: showup ease 800ms;
+    padding: 25px;
+    overflow: hidden;
+}
+
+.toast i:nth-child(3):hover {
+    cursor: pointer;
+}
+
+
+
+.toast .content, .toast i {
+    font-size:x-large;
+}
+
+.toast::after {
+    position: absolute;
+    border-radius: inherit;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    box-shadow: 0 0 20px white;
+    animation: cooldown 5s linear 1 forwards;
+}
+
+
+@keyframes showup {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    
+    100% {
+        transform: translateX(-5%);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .wind , .humidity {
+        width: 100%;
+    }
+
+    /* make search button go down  */
+    .search {
+        flex-direction: column;
+        background: none;
+    }
+
+    .mobile_search {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);               /* Blurs what is behind this div */
+        -webkit-backdrop-filter: blur(10px);        /* Safari support */
+    }
+
+    #search_button {
+        width: 100%;
+    }
+
+    body, .notifications {
+        width: 100%;
+    }
+    .toast {
+        width: 90%;
+        margin: auto;
+    }
+    
+}
