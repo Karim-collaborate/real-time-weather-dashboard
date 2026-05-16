@@ -18,7 +18,7 @@ In addition to weather visualization, the project focuses on modern UI/UX design
 * 📅 3-day weather forecast
 * 🌡️ Display temperature, humidity, and weather conditions
 * 🧊 Modern Glassmorphism UI design
-* 🍞 Toast notifications 
+* 🍞 Toast notifications with cooldown feature
 * 📱 Fully responsive interface for desktop and mobile devices
 * 🔒 HTTPS support for encrypted communication
 * 🛡️ Backend security controls and HTTP security headers
@@ -85,9 +85,25 @@ The application uses a modern **Glassmorphism** design style to provide:
 
 ---
 
+## 📂 Project Structure
+
+```
+├── weather.html
+├── weather.css
+├── weather.js
+├── api.js
+├── server.js
+├── .env.example
+├── .gitignore
+├── images/
+└── README.md
+```
+
+---
+
 ## 📷 Screenshots
 
-<img width="300" height="500" src=https://github.com/Karim-collaborate/real-time-weather-dashboard/blob/main/assets/screenshot.png>
+<img width="300" height="500" src=https://github.com/Karim-collaborate/real-time-weather-dashboard/blob/main/images/screenshot.png>
 
 ---
 
